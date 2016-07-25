@@ -1,0 +1,65 @@
+
+public class Monstro {
+	private float nivel=1,agilidade=2,força=6,socar,chutar,gritoAtordoante;
+	
+	public Monstro(float socar,float chutar, float gritoAtordoante){
+		this.setAtaq1(socar);
+		this.setAtaq2(chutar);
+		this.Ataq3(gritoAtordoante);
+	}
+	
+	public void setAtaq1(float socar){
+		if(socar<0){
+			this.socar=0;
+		}else{
+			this.socar=socar;
+		}
+	}
+	
+	public void setAtaq2(float chutar){
+		if(chutar<0){
+			this.chutar=0;
+		}else{
+			this.chutar=chutar;
+		}
+	}
+	
+	public void setAtaq3(float gritoAtordoante){
+		if(gritoAtordoante<0){
+			this.gritoAtordoante=0;
+		}else{
+			this.gritoAtordoante=gritoAtordoante;
+		}
+	}
+	
+	public String Descrição(){
+		return "\n Grande força física.\n Burro como uma porta.\n Incapaze de usar magia.";
+	}
+	
+	public float Ataq1(float socar){
+		return socar=(float) (nivel*Math.ceil(agilidade*0.4+força*0.8));
+	}
+	
+	public float Ataq2(float chutar){
+		return chutar=(float) (nivel*Math.ceil(agilidade*0.5+força*1.0));
+	}
+	
+	public float Ataq3(float gritoAtordoante){
+		return gritoAtordoante=(float) (nivel*Math.ceil(agilidade*0.2+força*0.4));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
